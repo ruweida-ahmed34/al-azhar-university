@@ -1,5 +1,21 @@
-# Week 01
+Project Name: Iqra Learning Center
 
-## Full-Stack Web Development
+Description:
+A responsive educational website built with HTML5 and CSS3.
 
-This folder contains my Week 1 coursework and exercises.
+Pages:
+1. Home
+2. About
+3. Courses
+4. Contact
+
+Technologies:
+- HTML5
+- CSS3
+
+Features:
+- Four linked pages
+- Responsive navigation
+- Flexbox
+- CSS Grid
+- Contact form
