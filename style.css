@@ -1,5 +1,4 @@
-/* Update layout */
-
+/* Custom CSS Variables & Reset */
 :root {
   --primary-color: #0b3c5d;
   --secondary-color: #f1c40f;
@@ -29,7 +28,7 @@ body {
 .main-header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding:0.85rem 1rem;
+  padding: 0.6rem 0.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,14 +42,15 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
 }
 
 .logo-section h1 {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Cabirka logo-ga oo mobile-ka ku habboon */
   font-weight: 800;
   color: var(--secondary-color);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .logo-section p {
@@ -60,8 +60,8 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 0.4rem;
-  flex-wrap: nowrap;
+  gap: 0.2rem; /* Booska u dhexeeya links-ka oo la yareeyay */
+  flex-wrap: nowrap !important;
   align-items: center;
 }
 
@@ -69,20 +69,19 @@ body {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.72rem; /* Farta oo la yareeyay si ay hal saf ugu wada gasho */
   transition: all 0.3s ease;
-  padding: 0.2rem 0.3rem;
+  padding: 0.15rem 0.2rem;
   border-radius: 4px;
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.08);
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
-
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(11, 60, 93, 0.5), rgba(11, 60, 93, 0.65)),
