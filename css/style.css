@@ -1,0 +1,386 @@
+/* Custom CSS Variables */
+:root {
+    --nav-blue: #0b2239;            /* Dark Blue Header Background */
+    --accent-orange: #ff7e36;       /* Midabka Orange ee badhanka */
+    --accent-gold: #f59e0b;         /* Gold Color */
+    --bg-cream: #f9f8f3;            /* Soft Light Background */
+    --card-bg: #ffffff;            /* White Cards Background */
+    --text-dark: #0f172a;          /* Main Text Color */
+    --text-muted: #526071;         /* Muted Text */
+    --white: #ffffff;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigation Layout */
+header {
+    background-color: var(--nav-blue);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.logo-arabic {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+    line-height: 1.1;
+}
+
+.logo-somali {
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active {
+    background-color: var(--accent-orange);
+    color: var(--white) !important;
+    font-weight: 700;
+}
+
+.nav-links a:hover:not(.active) {
+    color: var(--accent-gold);
+}
+
+/* Main Container Layout */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Hero Section - Sawirka Dambe oo la soo celiyay si sax ah */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(11, 34, 57, 0.75), rgba(11, 34, 57, 0.82)), 
+                url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 16px;
+}
+
+.hero h1 {
+    color: #ffffff !important;
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    color: #f1f5f9 !important;
+    font-size: 0.98rem;
+    max-width: 600px;
+    margin: 0 auto 1.8rem auto;
+    line-height: 1.55;
+}
+
+.btn-orange {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: #ffffff !important;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.98rem;
+    box-shadow: 0 4px 12px rgba(255, 126, 54, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #e06928;
+    transform: translateY(-2px);
+}
+
+/* Section Title */
+.content-container {
+    padding: 0 1.2rem 3rem 1.2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--nav-blue);
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.section-title-line {
+    width: 60px;
+    height: 3.5px;
+    background-color: var(--accent-orange);
+    margin: 0 auto 2.2rem auto;
+    border-radius: 2px;
+}
+
+/* Cards Grid Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.3rem;
+}
+
+.card h3 {
+    color: var(--nav-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 650px) {
+    header {
+        padding: 0.9rem 0.5rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 0.3rem;
+        flex-wrap: nowrap;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+        border-radius: 12px;
+    }
+
+    .hero h1 {
+        font-size: 1.45rem;
+    }
+
+    .hero p {
+        font-size: 0.88rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+}
+/* Hagaajinta Content Container iyo Foomka */
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem;
+    display: block; /* Waxay ka dhigaysaa inaysan isku jiidin bidix */
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    margin: 2rem auto 0 auto; /* Waxay foomka si sax ah ugu haysaa bartamaha */
+}
+
+/* Xaqiijinta in Form Groups-ku ay si qumman u degaan */
+.form-group {
+    margin-bottom: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Qoraalka label-ka wuxuu noqonayaa mid hagaagsan */
+}
+
+.form-group label {
+    font-weight: 700;
+    color: var(--nav-blue);
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    outline: none;
+}
+
+/* Hagaajinta badhanka Dir Fariinta ee Foomka */
+.btn-submit {
+    display: block;
+    width: 100%;
+    background-color: var(--accent-orange);
+    color: #ffffff;
+    border: none;
+    padding: 0.95rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e06928;
+}
+
+/* Hagaajinta gaarka ah ee Mobaylka si uu ula mid noqdo sawirkaaga */
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 0.5rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .brand-logo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-arabic {
+        font-size: 1.5rem;
+    }
+
+    .logo-somali {
+        font-size: 0.75rem;
+    }
+
+    /* Navigation links oo hal xariiq ah ku wada jira mobaylka */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        overflow-x: auto;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.55rem;
+        white-space: nowrap;
+        border-radius: 6px;
+    }
+
+    /* Badhanka Active-ka ee Mobaylka (Huruud/Dahabi ah) */
+    .nav-links a.active {
+        background-color: var(--accent-gold, #f59e0b) !important;
+        color: var(--nav-blue, #0b2239) !important;
+        font-weight: 800;
+    }
+}
