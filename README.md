@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project 1 — Responsive Multi-Page Website
 ## Jaamacadda Al-Azhar (Al-Azhar University) Website
 
@@ -46,3 +47,26 @@ al-azhar-university/
 ├── courses.html
 ├── contact.html
 └── README.md
+=======
+Project Name: Iqra Learning Center
+
+Description:
+A responsive educational website built with HTML5 and CSS3.
+
+Pages:
+1. Home
+2. About
+3. Courses
+4. Contact
+
+Technologies:
+- HTML5
+- CSS3
+
+Features:
+- Four linked pages
+- Responsive navigation
+- Flexbox
+- CSS Grid
+- Contact form
+>>>>>>> 29f070b03662b8c69f6054b3562446ef21898e48
